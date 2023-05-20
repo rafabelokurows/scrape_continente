@@ -3,7 +3,6 @@ library(jsonlite)
 library(dplyr)
 
 codigos = read.csv("data/codigos_scrape_continente.csv")
-codigos = codigos %>% slice(1:100)
 
 #ean = "3600541575790"
 # Specify the URL of the webpage
@@ -137,4 +136,4 @@ for (i in 1:nrow(codigos)){
 }
 #teste = scrape_continente(codigos$BARCODE)
 write.csv(df_produtos,paste0("data/",format(Sys.Date(), "%Y%m%d"),"_scrape_continente.csv"),row.names=F)
-save(df_produtos,file="data/produtos.rdata")
+save(df_produtos,file=paste0("data/",format(Sys.Date(), "%Y%m%d"),"_produtos.rdata")

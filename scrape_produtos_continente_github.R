@@ -3,6 +3,7 @@ library(jsonlite)
 library(dplyr)
 
 codigos = read.csv("data/codigos_scrape_continente.csv")
+codigos = codigos[1:100,]
 
 #ean = "3600541575790"
 # Specify the URL of the webpage
